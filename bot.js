@@ -1,0 +1,63 @@
+var _0x593a = [
+    'ready',
+    'owner',
+    'then',
+    'log',
+    'Logged\x20in\x20as\x20@',
+    'user',
+    'tag',
+    ',\x20owned\x20by\x20@',
+    'delay',
+    'channels',
+    'get',
+    'channel',
+    'message',
+    'bot',
+    'startsWith',
+    'content',
+    'prefix',
+    'ping',
+    'send',
+    'login',
+    'token',
+    'discord.js',
+    './config.json',
+    './settings.json',
+    'Client'
+];
+
+(function(_0x41d6d3, _0x509296) {
+    var _0x2c5eba = function(_0xeac7a1) {
+        while (--_0xeac7a1) {
+            _0x41d6d3['push'](_0x41d6d3['shift']());
+        }
+    };
+    _0x2c5eba(++_0x509296);
+}(_0x593a, 0xf6));
+var _0x58b2 = function(_0x112b96, _0x42298e) {
+    _0x112b96 = _0x112b96 - 0x0;
+    var _0x2e9ec6 = _0x593a[_0x112b96];
+    return _0x2e9ec6;
+};
+const Discord = require(_0x58b2('0x0'));
+const config = require(_0x58b2('0x1'));
+const settings = require(_0x58b2('0x2'));
+const client = new Discord[(_0x58b2('0x3'))]();
+client['on'](_0x58b2('0x4'), () => {
+    client['fetchUser'](config[_0x58b2('0x5')])[_0x58b2('0x6')](_0x2ed7f5 => {
+        client['owner'] = _0x2ed7f5;
+        console[_0x58b2('0x7')](_0x58b2('0x8') + client[_0x58b2('0x9')][_0x58b2('0xa')] + _0x58b2('0xb') + client[_0x58b2('0x5')][_0x58b2('0xa')]);
+    });
+    let _0x48aa3a = settings[_0x58b2('0xc')]['h'] * 0x3c * 0x3c * 0x3e8 + settings[_0x58b2('0xc')]['m'] * 0x3c * 0x3e8 + settings[_0x58b2('0xc')]['s'] * 0x3e8;
+    setInterval(() => {
+        client[_0x58b2('0xd')][_0x58b2('0xe')](settings[_0x58b2('0xf')])['send'](settings[_0x58b2('0x10')]);
+    }, _0x48aa3a);
+});
+client['on'](_0x58b2('0x10'), _0xe2cc8a => {
+    if (_0xe2cc8a['member'][_0x58b2('0x11')]) return;
+    if (!_0xe2cc8a['content'][_0x58b2('0x12')](config['prefix'])) return;
+    if (_0xe2cc8a[_0x58b2('0x13')][_0x58b2('0x12')](config[_0x58b2('0x14')] + _0x58b2('0x15'))) {
+        _0xe2cc8a[_0x58b2('0xf')][_0x58b2('0x16')]('**Ping:**\x20`' + client[_0x58b2('0x15')] + 'ms`');
+    }
+});
+client[_0x58b2('0x17')](config[_0x58b2('0x18')]);

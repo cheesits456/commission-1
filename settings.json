@@ -1,0 +1,9 @@
+{
+	"channel": "channel ID",
+	"message": "message sent to channel",
+	"delay": {
+		"h": 0,
+		"m": 0,
+		"s": 10
+	}
+}
