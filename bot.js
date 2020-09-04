@@ -9,10 +9,12 @@ client.on('ready', () => {
         console.log('Logged in as @' + client.user.tag + ', owned by @' + client.owner.tag);
     });
 
-    let interval = settings.delay.h * 60 * 60 * 1000 + settings.delay.m * 60 * 1000 + settings.delay.s * 1000;
-    setInterval(() => {
-        client.channels.get(settings.channel).send(settings.message);
-    }, interval);
+    let interval = 
+        settings.delay.h * 60 * 60 * 1000 + // hours
+        settings.delay.m * 60 * 1000 +      // minutes
+        settings.delay.s * 1000;            // seconds
+    
+    setInterval(() => client.channels.get(settings.channel).send(settings.message), interval);
 });
 
 client.on('message', message => {
